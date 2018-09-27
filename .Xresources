@@ -1,0 +1,42 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+!Xft.hintstyle: hintslight
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+
+
+*.font: xft:Roboto Mono medium:size=10
+
+!*.font: xft:Oxygen Mono:pixelsize=12
+
+
+URxvt.letterSpace: -1
+
+URxvt.pointerBlank: true
+URxvt.saveLines: 5000
+URxvt.scrollBar: false
+URxvt.cursorBlink: true
+URxvt.urgentOnBell: true
+URxvt*scrollTtyOutput: true
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+URxvt.url-select.underline: true
+!URxvt.keysym.Control-Alt-V: eval:paste_clipboard
+
+URxvt*geometry: 76x20
+URxvt.internalBorder: 15
+
+URxvt*transparent: false
+URxvt*shading: 10
+URxvt*depth: 32
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!URcbt.colorUL: #4682B4
+
+
