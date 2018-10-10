@@ -1,7 +1,9 @@
 ## MY ALIASES ## 
 
-alias pmyal="echo 'lst merge vga lolfetch pac diskspace extract() up() rd() crd()'"
+alias pmyal="echo 'lst merge vga lolfetch pac diskspace extract() up() rd() cbd()'"
 alias emyal="$EDITOR ~/.my_aliases"
+alias ezshrc="$EDITOR ~/.zshrc"
+alias evimrc="$EDITOR ~/.vimrc"
 
 alias merge="xrdb -merge ~/.Xresources"
 alias vga="lspci -k | grep -A 2 -E '(VGA|3D)'"
@@ -33,11 +35,11 @@ extract () {
 
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
 
-rd(){
+bd(){
     pwd > "$HOME/.lastdir_$1"
 }
 
-crd(){
+cbd(){
     lastdir="$(cat "$HOME/.lastdir_$1")">/dev/null 2>&1
     if [ -d "$lastdir" ]; then
         cd "$lastdir"
