@@ -1,49 +1,23 @@
-#!/bin/bash
-export GTK_IM_MODULE=xim
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=xim
-# custom dir colors, overrides themes and wal themeing
-#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
-eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-dark)"
+#ZSHRC
 
-# Print this to help me remember
-alias myal="echo 'net netcheck merge vga space randbg powersave powerspend '"
 
-# My aliases
-alias merge="xrdb -merge /home/.Xresources"
-alias vga="lspci -k | grep -A 2 -E '(VGA|3D)'"
-alias space="df -h"
-alias netcheck="nmcli"
-alias net="nmtui"
+wal -i ~/Pictures/backgrounds/bg -e -t -n &> /dev/null
 
-alias ls="ls --color=auto"
-alias ll="ls -alFh --color=auto"
-alias la="ls -a --color=auto"
+source ~/.my_aliases
 
-alias randbg="feh -z --bg-fill ~/pictures/backgrounds/* &> /dev/null"
-
-alias powersave="sudo cpupower frequency-set -g powersave"
-alias powerspend="sudo cpupower frequency-set -g performance"
-
+#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-dark)"
+eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/.oh-my-zsh"
-
-
-# MY THEMES THAT I LIKE BY NAME
-#amuse, avit, kardan(X), kolo, norm, sorin, sunaku (pwd), 
-
-
-ZSH_THEME="sunaku"
-
+export ZSH="/home/nowcow/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="sunaku"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,7 +45,7 @@ ZSH_THEME="sunaku"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -102,6 +76,10 @@ plugins=(
   colored-man-pages
   colorize
   cp
+  dirhistory
+  history
+  last-working-dir
+  yum
 )
 
 source $ZSH/oh-my-zsh.sh

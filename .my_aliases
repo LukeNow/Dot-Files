@@ -1,0 +1,48 @@
+## MY ALIASES ## 
+
+alias pmyal="echo 'lst merge vga lolfetch pac diskspace extract() up() rd() crd()'"
+alias emyal="$EDITOR ~/.my_aliases"
+
+alias merge="xrdb -merge ~/.Xresources"
+alias vga="lspci -k | grep -A 2 -E '(VGA|3D)'"
+alias lolfetch="neofetch | lolcat"
+alias pac='sudo pacman -Syu'
+alias diskspace="du -S | sort -n -r | less"
+alias lst='tree'
+
+extract () {
+   if [ -f $1 ] ; then
+       case $1 in
+           *.tar.bz2)   tar xvjf $1;;
+           *.tar.gz)    tar xvzf $1;;
+           *.bz2)       bunzip2 $1 ;;
+           *.rar)       unrar x $1 ;;
+           *.gz)        gunzip $1  ;;
+           *.tar)       tar xvf $1 ;;
+           *.tbz2)      tar xvjf $1;;
+           *.tgz)       tar xvzf $1;;
+           *.zip)       unzip $1   ;;
+           *.Z)         uncompress $1  ;;
+           *.7z)        7z x $1;;
+           *) echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+}
+
+up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
+
+rd(){
+    pwd > "$HOME/.lastdir_$1"
+}
+
+crd(){
+    lastdir="$(cat "$HOME/.lastdir_$1")">/dev/null 2>&1
+    if [ -d "$lastdir" ]; then
+        cd "$lastdir"
+    else
+        echo "no existing directory stored in buffer $1">&2
+    fi
+}
+

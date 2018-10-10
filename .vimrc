@@ -13,6 +13,10 @@ inoremap <Right> <Nop>
 "we are mapping j k and k j that if they were hit simultaously we exit insert
 inoremap jk <Esc>
 inoremap kj <Esc>
+"mapping home key to leader left and end to leader right
+nnoremap <leader>h <Home>
+nnoremap <leader>l <End>
+
 """Caolors and syntax
 syntax on
 set nu 
@@ -40,15 +44,14 @@ nnoremap <leader> <PageUp>
 nnoremap k gk
 nnoremap j gj
 
-
 call submode#enter_with('move', 'n', '', '<leader>k', '10k')
 call submode#enter_with('move', 'n', '', '<leader>j', '10j')
-call submode#enter_with('move', 'n', '', '<leader>l', '50k')
-call submode#enter_with('move', 'n', '', '<leader>h', '50j')
+"call submode#enter_with('move', 'n', '', '<leader>l', '50k')
+"call submode#enter_with('move', 'n', '', '<leader>h', '50j')
 call submode#map('move', 'n', '', 'k', '10k')
 call submode#map('move', 'n', '', 'j', '10j')
-call submode#map('move', 'n', '', 'l', '50k')
-call submode#map('move', 'n', '', 'h', '50j')
+"call submode#map('move', 'n', '', 'l', '50k')
+"call submode#map('move', 'n', '', 'h', '50j')
 call submode#leave_with('move', 'n', '', '<leader>')
 ""disable submode timeouts  
 let g:submode_timeout = 0
