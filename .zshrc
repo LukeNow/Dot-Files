@@ -6,7 +6,7 @@ export QT_IM_MODULE=xim
 #eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
 eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-dark)"
 
-# Print this to help my dumb ass remember
+# Print this to help me remember
 alias myal="echo 'net netcheck merge vga space randbg powersave powerspend '"
 
 # My aliases
