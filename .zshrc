@@ -1,12 +1,12 @@
 #ZSHRC
 
-
-wal -i ~/Pictures/backgrounds/bg -e -t -n &> /dev/null
-
 source ~/.my_aliases
 
-#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-dark)"
+#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-light)"
 eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
+
+#eval "$(dircolors ~/.dircolors/nord-dircolors/src/dir_colors)"
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
