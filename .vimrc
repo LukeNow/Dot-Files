@@ -1,6 +1,8 @@
+"" ale fzf nerdtree awesome-vim-colorscheme lightline vim-submode
 execute pathogen#infect()
 """ Master shortcuts
 let mapleader=" "
+
 ""We are doing this to train boiz
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
@@ -20,7 +22,7 @@ nnoremap <leader>l <End>
 """Caolors and syntax
 syntax on
 set nu 
-colorscheme desert
+colorscheme nord
 filetype plugin indent on
 
 """ Fonts spaces and tabs
@@ -39,19 +41,20 @@ set hlsearch
 nnoremap <leader>n :nohlsearch<CR>
 
 """ Movement
-nnoremap <leader> <PageUp>
+""Switch windows shortcuts
+nnoremap <leader>wl <C-w>l
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wh <C-w>h
+
 ""virtual line movement
 nnoremap k gk
 nnoremap j gj
 
 call submode#enter_with('move', 'n', '', '<leader>k', '10k')
 call submode#enter_with('move', 'n', '', '<leader>j', '10j')
-"call submode#enter_with('move', 'n', '', '<leader>l', '50k')
-"call submode#enter_with('move', 'n', '', '<leader>h', '50j')
 call submode#map('move', 'n', '', 'k', '10k')
 call submode#map('move', 'n', '', 'j', '10j')
-"call submode#map('move', 'n', '', 'l', '50k')
-"call submode#map('move', 'n', '', 'h', '50j')
 call submode#leave_with('move', 'n', '', '<leader>')
 ""disable submode timeouts  
 let g:submode_timeout = 0
@@ -70,4 +73,16 @@ nnoremap <leader>b4 md
 nnoremap <leader>4 'd
 nnoremap <leader>b5 me 
 nnoremap <leader>5 'e
- 
+
+"""NERDTREE
+""CLOSE vim if nerdtree is only one left
+nnoremap <leader>f :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+
+set laststatus=2
