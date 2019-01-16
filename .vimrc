@@ -27,8 +27,10 @@ filetype plugin indent on
 
 """ Fonts spaces and tabs
 ""set tabs to be width of 4 spaces
-set tabstop=4
-set softtabstop=4 
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab 
 "set cursorline
 ""autocompletion
 set wildmenu
@@ -67,8 +69,7 @@ nnoremap <leader>b1 ma
 nnoremap <leader>1	'a
 nnoremap <leader>b2 mb
 nnoremap <leader>2 'b
-nnoremap <leader>b3 mc 
-nnoremap <leader>3 'c
+nnoremap <leader>b3 mc nnoremap <leader>3 'c
 nnoremap <leader>b4 md 
 nnoremap <leader>4 'd
 nnoremap <leader>b5 me 
@@ -83,6 +84,15 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+"""COLORIZE
+nnoremap <leader>c :ColorToggle<CR>
+
+"""JUMP TO WHERE WE CLOSED FILE
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 
 set laststatus=2
