@@ -1,9 +1,13 @@
 #ZSHRC
 
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
 source ~/.my_aliases
 
 #eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-light)"
-eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
+#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
 
 #eval "$(dircolors ~/.dircolors/nord-dircolors/src/dir_colors)"
 
@@ -11,7 +15,7 @@ eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/nowcow/.oh-my-zsh"
+export ZSH="/home/luke/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

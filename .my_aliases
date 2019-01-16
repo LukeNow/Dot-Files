@@ -1,9 +1,9 @@
 ## MY ALIASES ## 
 
-alias pmyal="echo 'lst merge vga lolfetch pac diskspace extract() up() rd() cbd()'"
-alias emyal="$EDITOR ~/.my_aliases"
-alias ezshrc="$EDITOR ~/.zshrc"
-alias evimrc="$EDITOR ~/.vimrc"
+alias pmyal="echo 'emyal ezshrc evimrc lst merge vga lolfetch pac diskspace gitl extract() up() rd() cbd()'"
+alias emyal="vim ~/.my_aliases"
+alias ezshrc="vim ~/.zshrc"
+alias evimrc="vim ~/.vimrc"
 
 alias merge="xrdb -merge ~/.Xresources"
 alias vga="lspci -k | grep -A 2 -E '(VGA|3D)'"
@@ -11,6 +11,9 @@ alias lolfetch="neofetch | lolcat"
 alias pac='sudo pacman -Syu'
 alias diskspace="du -S | sort -n -r | less"
 alias lst='tree'
+
+alias gitl='git log --pretty=oneline --abbrev-commit'
+
 
 extract () {
    if [ -f $1 ] ; then
