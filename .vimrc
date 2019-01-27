@@ -1,5 +1,6 @@
 "" ale fzf nerdtree awesome-vim-colorscheme lightline vim-submode
 execute pathogen#infect()
+
 """ Master shortcuts
 let mapleader=" "
 
@@ -94,5 +95,15 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
-
 set laststatus=2
+
+""CTRL-P
+nnoremap <leader>p :CtrlPTag<CR>
+
+""C TAGS
+set cscopetag
+set tags=./tags,tags;$HOME
+
+nnoremap <leader>] <C-]> 
+nnoremap <leader><CR> <C-T>
+
