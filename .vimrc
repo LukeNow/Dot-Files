@@ -32,18 +32,26 @@ set tabstop=8
 set softtabstop=8
 set shiftwidth=8
 set noexpandtab 
+set smarttab
+set smartindent
 "set cursorline
 ""autocompletion
 set wildmenu
 set showmatch
-
 """ Searching 
 set incsearch
 set hlsearch
 ""Turn off search higlighting when done searching
 nnoremap <leader>n :nohlsearch<CR>
 
-""" Movement
+
+
+""Paren matching
+inoremap { {<CR><BS>}<esc>i
+inoremap ( (<CR><BS>)<esc>i
+inoremap [ [<CR><BS>]<esc>i
+
+"s"" Movement
 ""Switch windows shortcuts
 nnoremap <leader>wl <C-w>l
 nnoremap <leader>wj <C-w>j
@@ -67,10 +75,11 @@ let g:submode_keep_leaving_key = 1
 ""create book mark so I can return to it
 ""set with space-m-[num] and go to with space-[num]
 nnoremap <leader>b1 ma
-nnoremap <leader>1	'a
+nnoremap <leader>1 'a
 nnoremap <leader>b2 mb
 nnoremap <leader>2 'b
-nnoremap <leader>b3 mc nnoremap <leader>3 'c
+nnoremap <leader>b3 mc 
+nnoremap <leader>3 'c
 nnoremap <leader>b4 md 
 nnoremap <leader>4 'd
 nnoremap <leader>b5 me 
