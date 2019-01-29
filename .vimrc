@@ -1,6 +1,6 @@
 "" ale fzf nerdtree awesome-vim-colorscheme lightline vim-submode
 execute pathogen#infect()
-
+call pathogen#helptags()
 """ Master shortcuts
 let mapleader=" "
 
@@ -84,6 +84,12 @@ nnoremap <leader>b4 md
 nnoremap <leader>4 'd
 nnoremap <leader>b5 me 
 nnoremap <leader>5 'e
+
+""ALE
+nnoremap <leader>a :ALEToggle<CR>
+
+
+
 
 """NERDTREE
 ""CLOSE vim if nerdtree is only one left
