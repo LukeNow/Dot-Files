@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-VIMINIT='so /home/luke/.vimrc'
 source ~/.my_aliases
 
 # Path to your oh-my-zsh installation.
@@ -12,7 +11,7 @@ source ~/.my_aliases
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #ZSH_THEME="sunaku"
-ZSH_THEME="robbyrussell"
+ZSH_THEME= "mh" 
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
