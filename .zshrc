@@ -1,21 +1,10 @@
-#ZSHRC
-
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
-
-source ~/.my_aliases
-
-#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.ansi-light)"
-#eval "$(dircolors ~/.dircolors/dircolors-solarized/dircolors.256dark)"
-
-#eval "$(dircolors ~/.dircolors/nord-dircolors/src/dir_colors)"
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+VIMINIT='so /home/luke/.vimrc'
+source ~/.my_aliases
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/luke/.oh-my-zsh"
+  export ZSH="/home/luke/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -75,16 +64,15 @@ ZSH_THEME="sunaku"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  colored-man-pages
-  colorize
-  cp
-  dirhistory
-  history
-  last-working-dir
-  yum
-)
+plugins=(git
+	colored-man-pages
+	colorize
+	cp
+	dirhistory
+	history
+	last-working-dir
+#	yum
+	)
 
 source $ZSH/oh-my-zsh.sh
 

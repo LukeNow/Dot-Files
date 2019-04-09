@@ -1,4 +1,6 @@
 "" ale fzf nerdtree awesome-vim-colorscheme lightline vim-submode
+set runtimepath+=/home/luke/.vim
+
 execute pathogen#infect()
 call pathogen#helptags()
 """ Master shortcuts
@@ -45,11 +47,8 @@ set hlsearch
 nnoremap <leader>n :nohlsearch<CR>
 
 
-
 ""Paren matching
-inoremap { {<CR><BS>}<esc>i
-inoremap ( (<CR><BS>)<esc>i
-inoremap [ [<CR><BS>]<esc>i
+inoremap { {<CR><CR>}<esc>ki
 
 "s"" Movement
 ""Switch windows shortcuts
