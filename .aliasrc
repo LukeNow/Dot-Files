@@ -1,7 +1,7 @@
 ## MY ALIASES ## 
 
 alias pmyal="echo 'emyal ezshrc evimrc lst merge vga lolfetch pac diskspace gitl extract() up() rd() cbd() cat shellcheck'"
-alias emyal="vim ~/.my_aliases"
+alias emyal="vim ~/.aliasrc"
 alias ezshrc="vim ~/.zshrc"
 alias evimrc="vim ~/.vimrc"
 

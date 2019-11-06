@@ -22,11 +22,12 @@ inoremap kj <Esc>
 nnoremap <leader>h <Home>
 nnoremap <leader>l <End>
 
-"""Caolors and syntax
+"""Colors and syntax
 syntax on
 set nu 
 colorscheme nord
 filetype plugin indent on
+highlight Visual cterm=reverse ctermbg=NONE
 
 """ Fonts spaces and tabs
 ""set tabs to be width of 4 spaces
