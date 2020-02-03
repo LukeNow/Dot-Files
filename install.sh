@@ -10,6 +10,6 @@ git clone https://github.com/itchyny/lightline.vim.git ~/.vim/bundle/lightline.v
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/kana/vim-submode.git ~/.vim/bundle/vim-submode
 
-cp .my_aliases ~/.my_aliases 
+cp .aliasrc ~/.aliasrc
 cp .vimrc ~/.vimrc
 

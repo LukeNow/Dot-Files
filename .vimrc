@@ -47,9 +47,9 @@ set hlsearch
 ""Turn off search higlighting when done searching
 nnoremap <leader>n :nohlsearch<CR>
 
-
-""Paren matching
-inoremap { {<CR><CR>}<esc>ki
+""Create matching parents/brackets
+inoremap <leader>[ {<CR><CR>}<esc>ki
+inoremap <leader>] []<esc>i
 
 "s"" Movement
 ""Switch windows shortcuts
@@ -57,6 +57,9 @@ nnoremap <leader>wl <C-w>l
 nnoremap <leader>wj <C-w>j
 nnoremap <leader>wk <C-w>k
 nnoremap <leader>wh <C-w>h
+
+""scroll off - keep the window centered
+""set so=999
 
 ""virtual line movement
 nnoremap k gk
@@ -88,9 +91,6 @@ nnoremap <leader>5 'e
 ""ALE
 nnoremap <leader>a :ALEToggle<CR>
 
-
-
-
 """NERDTREE
 ""CLOSE vim if nerdtree is only one left
 nnoremap <leader>f :NERDTreeToggle<CR>
@@ -118,7 +118,6 @@ nnoremap <leader>p :CtrlPTag<CR>
 ""C TAGS
 set cscopetag
 set tags=./tags,tags;$HOME
-
 nnoremap <leader>] <C-]> 
 nnoremap <leader><CR> <C-T>
 
